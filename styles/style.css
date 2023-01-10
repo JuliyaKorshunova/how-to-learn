@@ -376,7 +376,7 @@ a {
   justify-content: space-between;
   padding: 60px 0 40px 0;
   min-height: 350px;
-}
+  }
 
   .footer__column_content_copyright {
     flex-basis: 711px;
@@ -429,7 +429,7 @@ a {
     .footer__column-link {
       margin: 0;
       padding: 0 0 20px 0;
-      height
+      height: 18pc;
       justify-content:center;
       line-height: 30px;
       font-size: 18px;
