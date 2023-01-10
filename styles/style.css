@@ -340,6 +340,8 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   z-index: 5;
+  flex-wrap: wrap;
+  width: 1100px;
   }
 
 .table_cell_theme_dark {
