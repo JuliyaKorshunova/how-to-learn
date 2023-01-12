@@ -16,9 +16,9 @@
   max-height: 756px;
   display: flex;
   margin: auto;
-  padding: auto;
   background-color: #f2f2f2;
   position: relative;
+  overflow: hidden; /* полосы прокрутки не предоставляются */
   /* выше установили ограничения для секции */
 }
 
@@ -39,7 +39,7 @@
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   height: 100%;
   display: flex;
   padding: 0;
@@ -52,22 +52,19 @@
 }
 
 .header__subtitle {
-  width: 388px;
+  max-width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
   z-index: 3;
   margin: 0;
   padding: 0;
-}
-
-p {
   line-height: 25px;
   font-size: 18px;
   font-style: normal;
 }
 
-a {
+.header__link {
   color: #2f80ed;
   cursor: pointer;
   text-decoration: none;
@@ -76,6 +73,7 @@ a {
 .header__main-illustration {
   width: 765px;
   height: 608px;
+  object-fit: cover;
   display: flex;
   position: absolute;
   bottom: 0px;
@@ -102,8 +100,6 @@ a {
 .description {
   display: flex;
   margin: auto;
-  padding: auto;
-  width: 80%;
   margin-top: 100px;
   height: auto;
   justify-content: center;
@@ -112,13 +108,13 @@ a {
   .two-columns {
     display: flex;
     place-content: center;
-    width: 80%;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
 
   .two-columns__brief {
-    width: 175px;
+    min-width: 175px;
     line-height: 1.2;
     font-size: 18px;
     font-style: normal;
@@ -135,8 +131,6 @@ a {
   }
 
   .two-columns__paragraph {
-
-    width: 784px;
     line-height: 34px;
     font-size: 24px;
     font-style: normal;
@@ -145,30 +139,38 @@ a {
     margin-bottom: 30px;
   }
 
-  span {
+  .two-columns__paragraph-end {
+    line-height: 34px;
+    font-size: 24px;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  .two-columns__span-accent {
     font-weight: 600;
   }
 
   /*конец 2 страницы*/
-
 .digits {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .section-title {
   width: 60%;
-  margin-bottom: 20px;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
   text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
 
 .section-subtitle {
@@ -177,26 +179,26 @@ a {
   font-size: 24px;
   font-style: normal;
   text-align: center;
-  margin-bottom: 60px;
   margin: 0;
   padding: 0;
 }
 
 .table {
-  width: 1100px;
+  max-width: 1100px;
   display: flex;
-  margin: auto;
+  margin: 0;
   justify-content: space-evenly;
   align-items: flex-start;
   margin-top: 60px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .table__cell {
   width: 250px;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 60px 0 0 0;
   padding: 0;
 }
 
@@ -209,27 +211,27 @@ a {
 }
 
 .table__text {
-  margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-style: normal;
+  margin: 20px 0 0 0;
   padding: 0;
   }
 
 /*конец 3 страницы*/
 
-.feinman {
+.feynman {
   margin: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
 }
 
-.feinman__illustration {
+.feynman__illustration {
   margin: 0;
   padding: 0;
   width: 867px;
@@ -242,39 +244,37 @@ a {
 
 .feynman__title {
   margin: 0;
-  width: 648px;
+  max-width: 648px;
   padding-top: 100px;
   padding-bottom: 70px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  position: relative;
-  z-index: 11;
+    z-index: 11;
   }
 
 .feynman__subtitle {
-  width: 648px;
+  max-width: 648px;
   padding: 0;
   margin: 0;
   text-align: center;
   line-height: 51px;
   font-size: 36px;
+  font-weight: normal;
   font-style: normal;
-  position: relative;
-  z-index: 13;
+    z-index: 13;
  }
 
 .feynman__link {
   position: absolute;
   right: 48px;
+  top: 50%;
   line-height: 51px;
   font-size: 36px;
   font-style: normal;
   margin: 0;
   padding: 0;
-  top: 50%;
-  bottom: 50%;
 }
 
 /*окнец 4 страницы*/
@@ -290,7 +290,6 @@ a {
   margin-right: auto;
   margin-top: 90px;
   padding-bottom: 90px;
-  z-index: 5;
   position: relative;
   overflow: hidden;
 }
@@ -309,7 +308,7 @@ a {
 .section-title_theme_dark {
   margin: 0;
   padding: 0;
-  width: 60;
+  width: 60%;
   padding-bottom: 20px;
   line-height: 1.15;
   font-size: 60px;
@@ -320,7 +319,7 @@ a {
 }
 
 .section-subtitle_theme_dark {
-  width: 60;
+  width: 60%;
   line-height: 34px;
   font-size: 24px;
   font-style: normal;
@@ -344,14 +343,14 @@ a {
   width: 1100px;
   }
 
-.table_cell_theme_dark {
+.table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
 }
 
-.table_heading_theme_dark {
+.table__heading_theme_dark {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
@@ -359,7 +358,7 @@ a {
   padding: 0;
 }
 
-.table_text_theme_dark {
+.table__text_theme_dark {
   margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
@@ -382,6 +381,7 @@ a {
   justify-content: space-between;
   padding: 60px 0 40px 0;
   min-height: 350px;
+  box-sizing: border-box;
   }
 
   .footer__column_content_copyright {
@@ -390,8 +390,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
   }
-
-    .logo_place_futer {
+    .logo_place_footer {
       display: flex;
       margin: 0;
       padding: 0;
@@ -420,29 +419,40 @@ a {
     }
 
     .footer__column-links {
-      display: flex;
+      margin: 0;
+      margin-bottom: 16px;
+      padding: 0;
+
+
       flex-direction: column;
       list-style: none;
-      justify-content:center;
+      justify-content: center;
       line-height: 30px;
       font-size: 18px;
-      font-style: normal;
-      margin: 0;
-      padding: 0 0 16px 0;
+      font-weight: normal;
+      color: white;
+      text-decoration: none;
     }
 
     .footer__column-link {
       margin: 0;
-      padding: 0 0 20px 0;
-      height: 18px;
+      padding: 0;
       justify-content:center;
-      line-height: 30px;
       font-size: 18px;
+      font-weight: normal;
       font-style: normal;
       color: white;
-  }
-
-    .footer__social-icon {
-      list-style: none;
+      text-decoration: none;
     }
 
+    .footer__social-icon {
+      margin: 0;
+      margin-right: 30px;
+      padding: 0;
+      line-height: 10px;
+      width: 16px;
+      height: 16px;
+    }
+    list-style {
+      disc outside;
+    }
