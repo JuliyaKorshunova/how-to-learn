@@ -258,8 +258,7 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  font-weight: normal;
-    z-index: 13;
+  z-index: 13;
  }
 
 .feynman__link {
@@ -363,8 +362,7 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  padding: 0;
-  }
+}
 
 /*конец 5 страницы*/
 
