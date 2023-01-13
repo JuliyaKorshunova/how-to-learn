@@ -61,6 +61,7 @@
   padding: 0;
   line-height: 25px;
   font-size: 18px;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -106,17 +107,20 @@
  }
 
   .two-columns {
+    margin: 0;
+    padding: 0;
     display: flex;
     place-content: center;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    align-content: center;
+    width: 80%;
   }
 
   .two-columns__brief {
-    min-width: 175px;
+    max-width: 175px;
     line-height: 1.2;
     font-size: 18px;
+    font-weight: normal;
     font-style: normal;
     color: #2f80ed;
     margin: 0;
@@ -133,21 +137,14 @@
   .two-columns__paragraph {
     line-height: 34px;
     font-size: 24px;
+    font-weight: normal;
     font-style: normal;
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
   }
 
-  .two-columns__paragraph-end {
-    line-height: 34px;
-    font-size: 24px;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-  }
-
-  .two-columns__span-accent {
+    .two-columns__span-accent {
     font-weight: 600;
   }
 
@@ -177,6 +174,7 @@
   width: 60%;
   line-height: 34px;
   font-size: 24px;
+  font-weight: normal;
   font-style: normal;
   text-align: center;
   margin: 0;
@@ -189,8 +187,6 @@
   margin: 0;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-top: 60px;
-  margin-bottom: 60px;
   flex-wrap: wrap;
 }
 
@@ -213,7 +209,7 @@
 .table__text {
   line-height: 1.2;
   font-size: 18px;
-  font-style: normal;
+  font-weight: normal;
   margin: 20px 0 0 0;
   padding: 0;
   }
@@ -245,7 +241,7 @@
 .feynman__title {
   margin: 0;
   max-width: 648px;
-  padding-top: 100px;
+  padding-top: 0;
   padding-bottom: 70px;
   text-align: center;
   line-height: 1.15;
@@ -262,7 +258,7 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
-  font-style: normal;
+  font-weight: normal;
     z-index: 13;
  }
 
@@ -272,7 +268,8 @@
   top: 50%;
   line-height: 51px;
   font-size: 36px;
-  font-style: normal;
+  color: #2f80ed;
+  font-weight: normal;
   margin: 0;
   padding: 0;
 }
@@ -281,6 +278,8 @@
 
 
 .kaufman {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,7 +287,7 @@
   background-color: #1f1f1f;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 90px;
+  padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
   overflow: hidden;
@@ -319,15 +318,14 @@
 }
 
 .section-subtitle_theme_dark {
+  margin: 0;
+  padding: 0;
   width: 60%;
   line-height: 34px;
   font-size: 24px;
-  font-style: normal;
+  font-weight: normal;
   text-align: center;
-  margin-bottom: 60px;
   color: white;
-  margin: 0;
-  padding: 0;
   z-index: 5;
 }
 
@@ -351,18 +349,20 @@
 }
 
 .table__heading_theme_dark {
+  margin: 0;
+  padding: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin: 0;
-  padding: 0;
 }
 
 .table__text_theme_dark {
+  margin: 0;
+  padding: 0;
   margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
-  font-style: normal;
+  font-weight: normal;
   padding: 0;
   }
 
@@ -390,6 +390,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
     .logo_place_footer {
       display: flex;
       margin: 0;
@@ -402,7 +403,7 @@
       padding-bottom: 18px;
       line-height: 25px;
       font-size: 18px;
-      font-style: normal;
+      font-weight: normal;
     }
 
   .footer__column_content_info{
@@ -411,19 +412,18 @@
   }
 
     .footer__column-heading {
+      margin: 0;
+      padding: 0 0 20px 0;
       line-height: 30px;
       font-size: 18px;
       font-weight: 600;
-      margin: 0;
-      padding: 0 0 20px 0;
+
     }
 
     .footer__column-links {
       margin: 0;
       margin-bottom: 16px;
       padding: 0;
-
-
       flex-direction: column;
       list-style: none;
       justify-content: center;
@@ -432,6 +432,7 @@
       font-weight: normal;
       color: white;
       text-decoration: none;
+      list-style-type:none;
     }
 
     .footer__column-link {
@@ -440,16 +441,16 @@
       justify-content:center;
       font-size: 18px;
       font-weight: normal;
-      font-style: normal;
       color: white;
       text-decoration: none;
     }
+
 
     .footer__social-icon {
       margin: 0;
       margin-right: 30px;
       padding: 0;
-      line-height: 10px;
+      padding-left: 10px;
       width: 16px;
       height: 16px;
     }
