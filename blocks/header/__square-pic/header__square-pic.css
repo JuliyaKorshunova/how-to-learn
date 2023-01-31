@@ -1,0 +1,15 @@
+.header__square-pic {
+    width: 568px;
+    height: 568px;
+    display: flex;
+    position: absolute;
+    top: 64px;
+    right: 0px;
+    background-color: #2f80ed;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    animation: rotation 20s ease-in-out infinite;
+  }
+
+  /*конц 1 страницы*/
