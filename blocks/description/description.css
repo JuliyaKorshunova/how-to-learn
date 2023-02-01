@@ -1,7 +1,4 @@
 .description {
-    display: flex;
-    margin: auto;
-    margin-top: 100px;
-    height: auto;
-    justify-content: center;
+    margin: 0;
+    padding-top: 100px;
   }

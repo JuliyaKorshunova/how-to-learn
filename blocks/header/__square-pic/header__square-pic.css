@@ -9,7 +9,8 @@
     z-index: 1;
     margin: 0;
     padding: 0;
-    animation: rotation 20s ease-in-out infinite;
+    animation: rotation 20s linear infinite;
+    overflow: hidden;
   }
 
   /*конц 1 страницы*/
